@@ -18,12 +18,15 @@ library(tidyverse)
 A random sample of size 10 from a uniform[0, 5] distribution
 
 ```{r data_frame_1}
+
 uniform_ten = runif(10,min = 0,max = 5)
+
 ```
 
 A logical vector indicating whether elements of the sample are greater than 2
 
 ```{r}
+
 def_larger_than_two = ifelse(uniform_ten > 2 , TRUE, FALSE)
 
 ```
@@ -31,18 +34,23 @@ def_larger_than_two = ifelse(uniform_ten > 2 , TRUE, FALSE)
 A (length-10) character vector
 
 ```{r}
+
 char_leng_ten = c("a" , "b" , "c" , "e" , "f", "g", "h", "i", "j", "k")
 
 ```
 
 A (length-10) factor vector
 ```{r}
+
 fac_leng_ten = factor(c("a" , "b" , "c" , "e" , "f", "g", "h", "i", "j", "k"))
 
 ```
 
 Create a dataframe consists of these variables:
 ```{r}
+
+data_frame_q1 = data.frame(uniform_ten,def_larger_than_two,char_leng_ten,fac_leng_ten)
+skimr::skim(data_frame_q1)
 
 ```
 
