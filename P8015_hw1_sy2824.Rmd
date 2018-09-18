@@ -13,7 +13,7 @@ library(tidyverse)
 
 # Problem 1
 
-## Create a data frame comprised of:
+## Create a data frame with four variables:
 
 A random sample of size 10 from a uniform[0, 5] distribution
 
@@ -53,4 +53,46 @@ data_frame_q1 = data.frame(uniform_ten,def_larger_than_two,char_leng_ten,fac_len
 skimr::skim(data_frame_q1)
 
 ```
+
+## Take the mean of each variable
+
+Calculate the mean of the random sample of uniform distribution:
+
+```{r}
+
+uniform_ten_mean = mean(uniform_ten)
+uniform_ten_mean
+
+```
+
+Calculate the mean of the logical vector:
+
+```{r}
+
+def_larger_than_two_mean = mean(def_larger_than_two)
+def_larger_than_two_mean
+
+```
+
+Calculate the mean of the charactor vector:
+
+```{r}
+
+char_leng_ten_mean = mean(char_leng_ten)
+char_leng_ten_mean
+
+```
+
+Calculate the mean of the factor vector:
+
+```{r}
+
+fac_leng_ten_mean = mean(fac_leng_ten)
+fac_leng_ten_mean
+
+```
+
+As we can seen from the results, only the mean of random variable from uniform and the logical variable could be calculated. Because random variable from uniform is numberic and logical varibale is denoted as '0' or '1' which represents 'FALSE' and 'TRUE'.
+
+For charactor variable and factor variable, the mean could not be calculated since the elements it stored are not numberic or logical. Also, calculating the mean of charactor and factor variable is meaningless. 
 
