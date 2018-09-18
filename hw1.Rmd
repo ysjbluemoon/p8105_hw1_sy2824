@@ -52,26 +52,16 @@ length(fac_leng_ten)
 # Section 2
 
 ```{r}
-# x is a random sample of size 1000 from a standard Normal distribution
+
 x = rnorm(1000)
 
-# y is a random sample of size 1000 from a standard Normal distribution
 y = rnorm(1000)
 
-# log_flag is a logical vector indicating whether the x + y > 0
 log_flag = ifelse(x + y > 0, TRUE, FALSE)
-# test the class of log_flag
-class(log_flag)
 
-# num_flag is a numeric vector created by coercing log_flag
 num_flag = as.numeric(log_flag)
-# test the class of num_log
-class(num_flag)
 
-# fac_flag is a factor vector created by coercing log_flag
 fac_flag = as.factor(log_flag)
-# test the class of fac_flag
-class(fac_flag)
 
 data_frame_q2 = data.frame(x,y,num_flag,fac_flag)
 str(data_frame_q2)
