@@ -49,7 +49,7 @@ length(fac_leng_ten)
 
 ```
 
-create a dataframe of these vectors
+Create a dataframe of these vectors
 ```{r}
 data_frame_q1 = data.frame(uniform_ten,def_larger_than_two,char_leng_ten,fac_leng_ten)
 ```

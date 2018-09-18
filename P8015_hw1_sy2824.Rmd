@@ -1,0 +1,8 @@
+---
+title: "P8015_hw1_sy2824"
+author: "Sijia Yue"
+date: "2018-09-18"
+output: github_document
+---
+
+This is the first homework of data science. 
