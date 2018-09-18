@@ -1,0 +1,80 @@
+---
+title: "hw1"
+output: github_document
+---
+
+This is the first homework of data science. 
+
+
+```{r library_list, include=FALSE}
+
+library(tidyverse)
+
+```
+
+
+# Problem 1
+A random sample of size 10 from a uniform[0, 5] distribution
+
+
+```{r}
+
+x = rnorm(10)
+
+```
+
+A logical vector indicating whether elements of the sample are greater than 2
+
+```{r}
+
+def_larger_than_two = ifelse (x > 2 , TRUE, FALSE)
+
+```
+
+A (length-10) character vector
+
+```{r}
+
+char_leng_ten = c("a" , "b" , "c" , "e" , "f", "g", "h", "i", "j", "k")
+length(char_leng_ten)
+
+```
+
+A (length-10) factor vector
+
+```{r}
+
+fac_leng_ten = factor(c("a" , "b" , "c" , "e" , "f", "g", "h", "i", "j", "k"))
+length(fac_leng_ten)
+
+```
+
+# Section 2
+
+```{r}
+# x is a random sample of size 1000 from a standard Normal distribution
+x = rnorm(1000)
+
+# y is a random sample of size 1000 from a standard Normal distribution
+y = rnorm(1000)
+
+# log_flag is a logical vector indicating whether the x + y > 0
+log_flag = ifelse(x + y > 0, TRUE, FALSE)
+# test the class of log_flag
+class(log_flag)
+
+# num_flag is a numeric vector created by coercing log_flag
+num_flag = as.numeric(log_flag)
+# test the class of num_log
+class(num_flag)
+
+# fac_flag is a factor vector created by coercing log_flag
+fac_flag = as.factor(log_flag)
+# test the class of fac_flag
+class(fac_flag)
+
+data_frame_q2 = data.frame(x,y,num_flag,fac_flag)
+str(data_frame_q2)
+```
+
+The size of the dataset is
