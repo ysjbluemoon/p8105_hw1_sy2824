@@ -7,8 +7,9 @@ output: github_document
 
 This is the first homework of data science. 
 
-```{r library, include=FALSE}
+```{r preparation work, include=FALSE}
 library(tidyverse)
+set.seed(1)
 ```
 
 # Problem 1
@@ -136,4 +137,54 @@ Rewrite the chunk of converting the factor variable
 as.numeric(as.character(fac_leng_ten))
 
 ```
+
+# Question 2
+
+## Create a dataframe of five vectors:
+
+A random sample of size 1000 from a standard Normal distribution
+```{r}
+
+x = rnorm(1000)
+
+```
+
+A random sample of size 1000 from a standard Normal distribution
+
+```{r}
+
+y = rnorm(1000)
+
+```
+
+A logical vector indicating whether the x + y > 0
+
+```{r}
+
+log_flag = ifelse(x + y > 0, TRUE, FALSE)
+
+```
+
+A numeric vector created by coercing the above logical vector
+
+```{r}
+
+num_flag = as.numeric(log_flag)
+
+```
+
+A factor vector created by coercing the above logical vector
+```{r}
+fac_flag = as.factor(log_flag)
+
+```
+
+Create a data frame consits of these five vectors:
+```{r}
+
+data_frame_q2 = data.frame(x,y,log_flag,num_flag,fac_flag)
+skimr::skim(data_frame_q2)
+
+```
+
 
