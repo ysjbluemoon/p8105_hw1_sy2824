@@ -19,7 +19,7 @@ A random sample of size 10 from a uniform[0, 5] distribution
 
 ```{r data_frame_1}
 
-uniform_ten = runif(10,min = 0,max = 5)
+uniform_ten = runif(10, min = 0, max = 5)
 
 ```
 
@@ -95,4 +95,45 @@ fac_leng_ten_mean
 As we can seen from the results, only the mean of random variable from uniform and the logical variable could be calculated. Because random variable from uniform is numberic and logical varibale is denoted as '0' or '1' which represents 'FALSE' and 'TRUE'.
 
 For charactor variable and factor variable, the mean could not be calculated since the elements it stored are not numberic or logical. Also, calculating the mean of charactor and factor variable is meaningless. 
+
+## Parsing the type of variables:
+
+Converting the logical variable into numberic
+
+```{r}
+
+as.numeric(def_larger_than_two)
+
+```
+
+Converting the charactor variable into numberic
+
+```{r}
+
+as.numeric(char_leng_ten)
+
+```
+
+Converting the factor variable into numberic
+
+```{r}
+
+as.numeric(fac_leng_ten)
+
+```
+
+Rewrite the chunk of converting the charactor variable
+
+```{r eval=FALSE}
+
+as.numeric(as.factor(char_leng_ten))
+
+```
+
+Rewrite the chunk of converting the factor variable
+```{r eval=FALSE}
+
+as.numeric(as.character(fac_leng_ten))
+
+```
 
