@@ -187,4 +187,13 @@ skimr::skim(data_frame_q2)
 
 ```
 
+## Intruce of this dataset
+
+This is a brief introduction of this dataset:
+
+The size of the dataset is `r ncol(data_frame_q2)` colums and `r nrow(data_frame_q2)` rows.
+
+The mean of x is `r mean(x)` and median is `r median(x)`.
+
+The proportion of cases for which the logical vector is TRUE is `r sum(log_flag)/1000 `.
 
