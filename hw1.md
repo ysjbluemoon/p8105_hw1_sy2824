@@ -15,7 +15,7 @@ x = rnorm(10)
 A logical vector indicating whether elements of the sample are greater than 2
 
 ``` r
-def_larger_than_two = ifelse (x > 2 , TRUE, FALSE)
+def_larger_than_two = ifelse(x > 2 , TRUE, FALSE)
 ```
 
 A (length-10) character vector
@@ -39,7 +39,10 @@ length(fac_leng_ten)
 Section 2
 =========
 
+Create a dataframe of four vectors:
+
 ``` r
+set.seed(1)
 x = rnorm(1000)
 
 y = rnorm(1000)
@@ -50,14 +53,21 @@ num_flag = as.numeric(log_flag)
 
 fac_flag = as.factor(log_flag)
 
-data_frame_q2 = data.frame(x,y,num_flag,fac_flag)
+data_frame_q2 = data.frame(x,y,log_flag,num_flag,fac_flag)
 str(data_frame_q2)
 ```
 
-    ## 'data.frame':    1000 obs. of  4 variables:
-    ##  $ x       : num  0.584 -0.155 0.638 -0.749 -0.802 ...
-    ##  $ y       : num  0.0847 1.7337 -1.5126 0.1823 0.9332 ...
-    ##  $ num_flag: num  1 1 0 0 1 0 1 1 1 0 ...
-    ##  $ fac_flag: Factor w/ 2 levels "FALSE","TRUE": 2 2 1 1 2 1 2 2 2 1 ...
+    ## 'data.frame':    1000 obs. of  5 variables:
+    ##  $ x       : num  -0.626 0.184 -0.836 1.595 0.33 ...
+    ##  $ y       : num  1.135 1.1119 -0.8708 0.2107 0.0694 ...
+    ##  $ log_flag: logi  TRUE TRUE FALSE TRUE TRUE FALSE ...
+    ##  $ num_flag: num  1 1 0 1 1 0 1 0 0 1 ...
+    ##  $ fac_flag: Factor w/ 2 levels "FALSE","TRUE": 2 2 1 2 2 1 2 1 1 2 ...
 
-The size of the dataset is
+This is a brief introduction of this dataset:
+
+The size of the dataset is 5 colums and 1000 rows.
+
+The mean of x is -0.0116481 and median is -0.0353242.
+
+The proportion of cases for which the logical vector is 0.2
