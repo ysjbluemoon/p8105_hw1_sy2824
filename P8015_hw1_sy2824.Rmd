@@ -9,7 +9,9 @@ This is the first homework of data science.
 
 ```{r preparation work, include=FALSE}
 library(tidyverse)
+library(ggplot2)
 set.seed(1)
+rm(list = ls())
 ```
 
 # Problem 1
@@ -197,3 +199,32 @@ The mean of x is `r mean(x)` and median is `r median(x)`.
 
 The proportion of cases for which the logical vector is TRUE is `r sum(log_flag)/1000 `.
 
+## Plot the scatterlpot of y vs x
+
+Plot the scatterplot of y vs x using logical vector as color points:
+```{r}
+
+plot_df_log = tibble(x,y)
+
+ggplot(plot_df_log, aes(x = x, y = y, color = log_flag)) + geom_point()
+ggsave("plot_df_log.pdf")
+
+```
+
+Plot the scatterplot of y vs x using numberic vector as color points:
+```{r}
+
+plot_df_num = tibble(x,y)
+
+ggplot(plot_df_num, aes(x = x, y = y, color = num_flag)) + geom_point()
+
+```
+
+Plot the scatterplot of y vs x using factor vector as color points:
+```{r}
+
+plot_df_fac = tibble(x,y)
+
+ggplot(plot_df_fac, aes(x = x, y = y, color = fac_flag)) + geom_point()
+
+```
